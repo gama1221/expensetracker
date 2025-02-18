@@ -1,11 +1,15 @@
 from rest_framework import viewsets, permissions
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Expense
-from .serializers import ExpenseSerializer
+from .models import Expense, User
+from .serializers import ExpenseSerializer, UserSerializer
 from .permissions import IsOwnerOrAdmin
 from django.db.models import Sum
 
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    
 class ExpenseViewSet(viewsets.ModelViewSet):
     queryset = Expense.objects.all()
     serializer_class = ExpenseSerializer

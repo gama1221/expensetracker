@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+AUTH_USER_MODEL = 'expenses.User'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'expenses',  # Your app for expense tracking
-    'dj_rest_auth',  # For token-based auth
-    'django_celery_beat',  # For task scheduling
+    'expenses',  
+    'dj_rest_auth',  
+    'rest_framework.authtoken',
+    'django_celery_beat',  
 ]
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']

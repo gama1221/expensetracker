@@ -1,4 +1,4 @@
-Django>=3.2,<4
+django
 djangorestframework
 django-celery-beat
 dj-rest-auth

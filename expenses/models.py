@@ -1,9 +1,20 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.conf import settings
+from django.contrib.auth.models import AbstractUser, Group, Permission
 
 class User(AbstractUser):
-    is_admin = models.BooleanField(default=False)  # Set if user is admin
+    is_admin = models.BooleanField(default=False) 
+    groups = models.ManyToManyField(
+        Group,
+        related_name="expenses_users",  # Change related_name to avoid conflict
+        blank=True
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        related_name="expenses_users_permissions",  # Change related_name to avoid conflict
+        blank=True
+    )
 
 class Expense(models.Model):
     CATEGORY_CHOICES = [

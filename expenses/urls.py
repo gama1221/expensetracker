@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import ExpenseViewSet, AnalyticsView
+from .views import ExpenseViewSet, AnalyticsView,UserViewSet  
 
 router = DefaultRouter()
 router.register(r'expenses', ExpenseViewSet)
