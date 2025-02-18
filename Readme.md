@@ -15,7 +15,7 @@ ExpenseTracker is a Django-based web application for tracking personal expenses.
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/expensetracker.git
+    git clone https://github.com/gama1221/expensetracker.git
     cd expensetracker
     ```
 
