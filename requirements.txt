@@ -1,0 +1,9 @@
+Django>=3.2,<4
+djangorestframework
+django-celery-beat
+dj-rest-auth
+celery
+pandas
+openpyxl
+python-decouple
+django-filter
